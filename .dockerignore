@@ -1,0 +1,4 @@
+.git
+.gitea
+/netq-exporter
+coverage.out
