@@ -1,6 +1,6 @@
-# netq-exporter
+# nvidia-netq-exporter
 
-`netq-exporter` polls NetQ Ethernet telemetry object APIs and exposes Prometheus metrics on `/metrics`.
+`nvidia-netq-exporter` polls NetQ Ethernet telemetry object APIs and exposes Prometheus metrics on `/metrics`.
 
 ## Endpoints
 
@@ -43,16 +43,16 @@ go test ./...
 ### Build the binary
 
 ```bash
-go build ./cmd/netq-exporter
+go build ./cmd/nvidia-netq-exporter
 ```
 
 ### Build the container image
 
 ```bash
-docker build -t netq-exporter:local .
+docker build -t nvidia-netq-exporter:local .
 ```
 
-Local validation result: `docker build -t netq-exporter:local .` completed successfully on May 16, 2026.
+Local validation result: `docker build -t nvidia-netq-exporter:local .` completed successfully on May 16, 2026.
 
 ### Run the container locally
 
@@ -64,7 +64,7 @@ docker run --rm -p 8080:8080 \
   -e NETQ_INSECURE_SKIP_VERIFY=true \
   -e NETQ_TIMEOUT=15s \
   -e POLL_INTERVAL=1m \
-  netq-exporter:local
+  nvidia-netq-exporter:local
 ```
 
 Then verify:
